@@ -24,13 +24,13 @@ def read_csv(file_path):
                         i = 0
                         for value in row[1:]:
                                 if row[0] != labels[i]: # skip if it is the same language pair
-                                        data[(row[0], labels[i])] = float(value)
-                                        i += 1
+                                        data[(labels[i], row[0])] = float(value)
+                                i += 1
         return data
 
 accuracy = read_csv('accuracy.csv')
 similarity = read_csv('similarity.csv')
-# print("Accuracy:", accuracy.values())
+# print("Accuracy:", accuracy)
 # print("Similarity:", similarity)
 
 #---------------Create scatterplot between accuracy and similarity---------------#
@@ -81,7 +81,6 @@ def normalize_data(data):
 
 z_accuracy = normalize_data(accuracy)
 z_similarity = normalize_data(similarity)
-# z_similarity = {key: -value for key, value in normalize_data(similarity).items()} #flip z scores since lower similarity should mean better accuracy
 # print("Normalized Accuracy:", z_accuracy)
 # print("Normalized Similarity:", z_similarity)
 
@@ -101,7 +100,6 @@ def create_heatmap_matrix(data):
 
         for (a1, a2), value in data.items():
                 matrix.loc[a1, a2] = value
-                matrix.loc[a2, a1] = value  # mirror the value
 
         for label in labels:
                 matrix.loc[label, label] = np.nan
@@ -255,7 +253,7 @@ comparison_sorted = dict(sorted(comparison_sorted.items(), key=lambda item: item
 #write all comparison data to csv
 with open("./Diagrams/Rankings/comparison.csv", "w", newline="", encoding="utf-8") as f:
     writer = csv.writer(f)
-    writer.writerow(["Language 1", "Language 2", "Value"])
+    writer.writerow(["Baseline", "Comparison", "Value"])
 
     for key, value in comparison_sorted.items():
         lang1, lang2 = key.split("-", 1)
@@ -294,7 +292,7 @@ comparison_abs = {key: abs(value) for key, value in comparison_sorted.items()}
 #write all comparison_abs data to csv
 with open("./Diagrams/Rankings/comparison_abs.csv", "w", newline="", encoding="utf-8") as f:
     writer = csv.writer(f)
-    writer.writerow(["Language 1", "Language 2", "Value"])
+    writer.writerow(["Baseline", "Comparison", "Value"])
 
     for key, value in comparison_abs.items():
         lang1, lang2 = key.split("-", 1)

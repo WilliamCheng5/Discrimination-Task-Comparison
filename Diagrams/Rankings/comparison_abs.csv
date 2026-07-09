@@ -1,191 +1,381 @@
-Language 1,Language 2,Value
-German,Greek,4.1
-Runyankore,Gishu,3.61
-Japanese,Taiwanese,2.98
-Mandarin,Taiwanese,2.9
-Russian,Greek,2.78
-Hebrew,Greek,2.62
-Singaporean,Taiwanese,2.56
-Hebrew,French,2.24
-Indonesian,Greek,2.2
-French,Greek,2.15
-Gujurati,Greek,2.15
-German,Gujurati,2.14
-German,French,2.08
-Gishu,Gujurati,2.08
-Hindi,Gujurati,2.02
-Gishu,Greek,2.01
-Spanish,Greek,1.87
-Russian,French,1.87
-Cantonese,Taiwanese,1.87
-Runyankore,Taiwanese,1.87
-Spanish,French,1.84
-Japanese,Runyankore,1.84
-Cantonese,Singaporean,1.79
-French,Gishu,1.7
-Br. Portuguese,Runyankore,1.68
-Turkish,Greek,1.65
-French,Gujurati,1.6
-German,Indonesian,1.59
-Hebrew,Gishu,1.59
-Mandarin,Singaporean,1.59
-Hebrew,Gujurati,1.53
-German,Russian,1.51
-Korean,Taiwanese,1.51
-Runyankore,Gujurati,1.48
-Br. Portuguese,Taiwanese,1.46
-German,Gishu,1.45
-Turkish,French,1.45
-Br. Portuguese,Greek,1.32
-Singaporean,Indonesian,1.25
-Korean,Singaporean,1.19
-Japanese,Gujurati,1.17
-Hebrew,Runyankore,1.09
-Russian,Gishu,1.09
-Japanese,Russian,1.03
-Vietnamese,Singaporean,0.98
-Russian,Runyankore,0.97
-Japanese,Singaporean,0.96
-Vietnamese,Taiwanese,0.95
-Hindi,Gishu,0.95
-Spanish,Taiwanese,0.91
-Mandarin,Indonesian,0.91
-Br. Portuguese,Gishu,0.89
-Singaporean,Gujurati,0.85
-Spanish,Gujurati,0.83
-Mandarin,Runyankore,0.82
-Spanish,Gishu,0.77
-Hindi,Greek,0.77
-Gishu,Taiwanese,0.76
-Japanese,Indonesian,0.69
-Vietnamese,French,0.68
-Turkish,Gujurati,0.68
-Spanish,Indonesian,0.63
-Singaporean,Gishu,0.63
-French,Runyankore,0.63
-Cantonese,Runyankore,0.59
-Korean,Indonesian,0.58
-Gujurati,Taiwanese,0.57
-Japanese,Greek,0.56
-Singaporean,Runyankore,0.54
-Russian,Indonesian,0.52
-Russian,Taiwanese,0.49
-Spanish,Japanese,0.43
-Indonesian,Taiwanese,0.41
-Vietnamese,Runyankore,0.4
-Japanese,French,0.4
-Runyankore,Greek,0.4
-Hebrew,Russian,0.39
-Turkish,Gishu,0.39
-Br. Portuguese,Gujurati,0.39
-German,Japanese,0.38
-Hebrew,Indonesian,0.37
-Spanish,Runyankore,0.35
-Br. Portuguese,Singaporean,0.35
-French,Taiwanese,0.35
-Mandarin,Gujurati,0.34
-Mandarin,Gishu,0.26
-Korean,Greek,0.26
-Russian,Gujurati,0.26
-German,Singaporean,0.2
-German,Spanish,0.2
-Korean,Gujurati,0.15
-Japanese,Gishu,0.14
-Mandarin,Greek,0.12
-Spanish,Singaporean,0.11
-Hindi,French,0.09
-Turkish,Runyankore,0.06
-Hindi,Indonesian,0.06
-Indonesian,Gujurati,0.03
-Korean,French,0.02
-German,Hebrew,0.0
-Vietnamese,Gishu,0.02
-Hebrew,Singaporean,0.05
-Hindi,Runyankore,0.06
-Indonesian,Gishu,0.06
-Mandarin,French,0.08
-Hebrew,Hindi,0.09
-Hebrew,Br. Portuguese,0.11
-Vietnamese,Indonesian,0.11
-Singaporean,Greek,0.11
-Indonesian,French,0.11
-Hebrew,Spanish,0.14
-German,Taiwanese,0.2
-Cantonese,French,0.2
-Hebrew,Taiwanese,0.25
-Br. Portuguese,French,0.29
-Turkish,Indonesian,0.33
-Korean,Gishu,0.33
-Indonesian,Runyankore,0.36
-German,Br. Portuguese,0.37
-Korean,Runyankore,0.37
-Vietnamese,Gujurati,0.43
-Cantonese,Gujurati,0.43
-Cantonese,Br. Portuguese,0.43
-Turkish,Taiwanese,0.44
-Greek,Taiwanese,0.48
-Cantonese,Gishu,0.49
-Spanish,Br. Portuguese,0.54
-Singaporean,French,0.6
-Korean,Cantonese,0.7
-Russian,Singaporean,0.73
-Vietnamese,Cantonese,0.77
-German,Turkish,0.8
-Turkish,Russian,0.8
-Hebrew,Japanese,0.82
-Hebrew,Mandarin,0.85
-Korean,Br. Portuguese,0.91
-Mandarin,Korean,0.93
-Vietnamese,Spanish,0.94
-Cantonese,Indonesian,0.96
-Spanish,Hindi,0.99
-German,Runyankore,1.02
-Vietnamese,Greek,1.05
-German,Hindi,1.08
-Russian,Hindi,1.11
-Japanese,Korean,1.12
-Japanese,Br. Portuguese,1.13
-Hindi,Taiwanese,1.13
-Turkish,Singaporean,1.17
-Cantonese,Greek,1.18
-Russian,Br. Portuguese,1.19
-Mandarin,Cantonese,1.22
-Vietnamese,Br. Portuguese,1.23
-Br. Portuguese,Indonesian,1.25
-Hindi,Singaporean,1.27
-Hebrew,Cantonese,1.33
-Br. Portuguese,Hindi,1.33
-Mandarin,Russian,1.34
-German,Korean,1.39
-Hebrew,Turkish,1.39
-Vietnamese,Japanese,1.43
-Mandarin,Japanese,1.43
-Vietnamese,Hindi,1.54
-Japanese,Cantonese,1.56
-Hebrew,Korean,1.6
-Spanish,Korean,1.65
-Turkish,Japanese,1.66
-Spanish,Russian,1.85
-Vietnamese,Korean,1.94
-Cantonese,Hindi,2.01
-German,Mandarin,2.08
-Korean,Russian,2.1
-Turkish,Br. Portuguese,2.14
-Turkish,Hindi,2.18
-Russian,Cantonese,2.19
-Vietnamese,Mandarin,2.22
-Mandarin,Br. Portuguese,2.24
-Japanese,Hindi,2.29
-Vietnamese,Russian,2.35
-Turkish,Cantonese,2.47
-Mandarin,Hindi,2.5
-Hebrew,Vietnamese,2.52
-Korean,Hindi,2.61
-Mandarin,Turkish,2.64
-Turkish,Korean,2.64
-Spanish,Turkish,2.65
-Spanish,Cantonese,2.7
-Spanish,Mandarin,2.84
-German,Cantonese,3.13
-Vietnamese,Turkish,3.36
-German,Vietnamese,3.73
+Baseline,Comparison,Value
+Greek,German,4.4
+Gishu,Runyankore,4.05
+Runyankore,Gishu,4.0
+Taiwanese,Japanese,3.33
+Taiwanese,Mandarin,3.24
+Greek,Russian,3.18
+Greek,Hebrew,3.0
+Taiwanese,Singaporean,2.95
+Gujurati,Greek,2.74
+Singaporean,Taiwanese,2.66
+French,Hebrew,2.59
+Greek,Indonesian,2.58
+Gujurati,German,2.53
+Gujurati,Gishu,2.52
+Gujurati,Hindi,2.51
+Greek,French,2.5
+Greek,Gujurati,2.5
+French,Greek,2.5
+French,German,2.48
+Gishu,Gujurati,2.47
+Runyankore,Gujurati,2.46
+Greek,Gishu,2.36
+Gishu,Greek,2.36
+Taiwanese,Cantonese,2.26
+Greek,Spanish,2.22
+French,Russian,2.22
+Taiwanese,Runyankore,2.22
+French,Spanish,2.21
+Runyankore,Japanese,2.21
+Indonesian,Greek,2.19
+Singaporean,Cantonese,2.13
+Gishu,French,2.07
+Russian,German,2.04
+Runyankore,Br. Portuguese,2.03
+French,Gishu,2.03
+Greek,Turkish,1.99
+Gishu,Hebrew,1.98
+Singaporean,Mandarin,1.98
+Indonesian,German,1.94
+Gujurati,Hebrew,1.93
+Gujurati,French,1.9
+German,Greek,1.9
+Taiwanese,Korean,1.89
+Indonesian,Singaporean,1.89
+Hebrew,Greek,1.89
+Gujurati,Runyankore,1.88
+Gishu,German,1.8
+French,Turkish,1.8
+Taiwanese,Br. Portuguese,1.76
+Singaporean,Gujurati,1.64
+Greek,Br. Portuguese,1.62
+Runyankore,Taiwanese,1.59
+Indonesian,Gujurati,1.56
+Singaporean,Indonesian,1.55
+Gujurati,Japanese,1.52
+Russian,Greek,1.5
+Singaporean,Japanese,1.49
+Singaporean,Korean,1.49
+Runyankore,Hebrew,1.47
+Gishu,Russian,1.47
+French,Runyankore,1.47
+French,Gujurati,1.47
+Russian,Japanese,1.46
+Singaporean,Runyankore,1.46
+Indonesian,Mandarin,1.4
+Runyankore,Russian,1.37
+Gujurati,Singaporean,1.35
+Taiwanese,Vietnamese,1.33
+Singaporean,Vietnamese,1.33
+Gishu,Hindi,1.33
+Cantonese,Taiwanese,1.3
+Gishu,Br. Portuguese,1.28
+Japanese,Cantonese,1.27
+Japanese,Taiwanese,1.27
+Gujurati,Spanish,1.23
+Gishu,Spanish,1.22
+Taiwanese,Spanish,1.21
+Runyankore,Mandarin,1.16
+Br. Portuguese,French,1.16
+Indonesian,Japanese,1.13
+Gishu,Singaporean,1.12
+Taiwanese,Gishu,1.11
+Runyankore,French,1.08
+Greek,Hindi,1.07
+Hindi,Gujurati,1.07
+French,Vietnamese,1.06
+Gujurati,Turkish,1.06
+Runyankore,Singaporean,1.03
+Russian,Hebrew,1.01
+Indonesian,Korean,0.99
+Spanish,Gishu,0.98
+Greek,Japanese,0.96
+Runyankore,Cantonese,0.96
+Indonesian,Russian,0.95
+Indonesian,Spanish,0.93
+Japanese,Spanish,0.93
+French,Japanese,0.93
+Runyankore,Greek,0.93
+Singaporean,Greek,0.93
+Turkish,Greek,0.93
+Taiwanese,Gujurati,0.92
+Br. Portuguese,Runyankore,0.88
+Gishu,Taiwanese,0.87
+Japanese,German,0.85
+Taiwanese,Indonesian,0.85
+Runyankore,Spanish,0.84
+Turkish,French,0.84
+Gishu,Turkish,0.82
+Japanese,Korean,0.82
+Gujurati,Br. Portuguese,0.82
+Taiwanese,Russian,0.79
+Japanese,French,0.79
+Runyankore,Vietnamese,0.78
+Indonesian,Hebrew,0.77
+Hebrew,German,0.75
+Gujurati,Russian,0.75
+Spanish,German,0.74
+Gishu,Japanese,0.74
+Greek,Runyankore,0.74
+Turkish,Russian,0.73
+Japanese,Runyankore,0.73
+Gujurati,Mandarin,0.69
+Mandarin,Singaporean,0.68
+Turkish,Japanese,0.67
+Singaporean,Br. Portuguese,0.65
+Taiwanese,French,0.65
+Indonesian,French,0.65
+Gishu,Mandarin,0.64
+German,Gujurati,0.61
+Indonesian,Taiwanese,0.61
+Greek,Korean,0.6
+Gujurati,Indonesian,0.6
+Singaporean,German,0.59
+Spanish,French,0.58
+Singaporean,Spanish,0.54
+Br. Portuguese,Hebrew,0.5
+Spanish,Hebrew,0.5
+Greek,Mandarin,0.5
+Gujurati,Korean,0.5
+Runyankore,Turkish,0.49
+French,Hindi,0.49
+French,Korean,0.48
+Singaporean,Gishu,0.45
+French,Br. Portuguese,0.44
+Runyankore,Hindi,0.43
+Indonesian,Hindi,0.41
+French,Taiwanese,0.41
+Hindi,Hebrew,0.39
+Gishu,Indonesian,0.39
+Br. Portuguese,Greek,0.37
+Singaporean,Hebrew,0.35
+French,Mandarin,0.35
+Hindi,Greek,0.35
+Gishu,Vietnamese,0.32
+Mandarin,Cantonese,0.32
+Indonesian,Runyankore,0.31
+Greek,Singaporean,0.3
+Russian,Indonesian,0.28
+Indonesian,Vietnamese,0.26
+Japanese,Russian,0.26
+Cantonese,Singaporean,0.26
+French,Indonesian,0.26
+French,Cantonese,0.25
+Mandarin,Russian,0.24
+Japanese,Greek,0.24
+Hindi,French,0.2
+Br. Portuguese,Gishu,0.18
+Vietnamese,Taiwanese,0.18
+Vietnamese,Cantonese,0.17
+Br. Portuguese,Spanish,0.16
+Br. Portuguese,German,0.15
+Indonesian,Gishu,0.15
+Gujurati,Taiwanese,0.15
+Hebrew,French,0.14
+Taiwanese,Hebrew,0.12
+Runyankore,Korean,0.11
+Taiwanese,German,0.1
+Hebrew,Hindi,0.1
+German,Hebrew,0.08
+Hebrew,Japanese,0.08
+Indonesian,Turkish,0.07
+Gishu,Korean,0.07
+Runyankore,Indonesian,0.07
+Mandarin,Taiwanese,0.07
+Br. Portuguese,Cantonese,0.06
+Russian,French,0.06
+Korean,Runyankore,0.06
+Korean,Taiwanese,0.02
+Russian,Turkish,0.04
+Mandarin,Runyankore,0.04
+Hindi,Runyankore,0.05
+Taiwanese,Turkish,0.06
+Cantonese,Korean,0.06
+Russian,Gujurati,0.06
+Cantonese,Vietnamese,0.07
+Turkish,German,0.08
+French,Singaporean,0.08
+Gujurati,Vietnamese,0.09
+Gujurati,Cantonese,0.09
+Gishu,Cantonese,0.14
+Japanese,Hebrew,0.16
+Hebrew,Gishu,0.18
+Taiwanese,Greek,0.18
+Spanish,Runyankore,0.21
+Cantonese,French,0.23
+Mandarin,Japanese,0.24
+Br. Portuguese,Gujurati,0.24
+Korean,Mandarin,0.26
+Hebrew,Turkish,0.26
+Singaporean,Russian,0.26
+German,Russian,0.26
+Korean,Cantonese,0.26
+Korean,Japanese,0.28
+Mandarin,Indonesian,0.28
+Mandarin,Hebrew,0.32
+Spanish,Br. Portuguese,0.32
+Hebrew,Br. Portuguese,0.32
+Japanese,Gishu,0.32
+Br. Portuguese,Korean,0.33
+Spanish,Japanese,0.36
+Spanish,Vietnamese,0.37
+Singaporean,French,0.37
+Br. Portuguese,Japanese,0.4
+Russian,Gishu,0.4
+Br. Portuguese,Taiwanese,0.4
+German,Turkish,0.41
+Hebrew,Gujurati,0.42
+Russian,Cantonese,0.43
+Vietnamese,Br. Portuguese,0.43
+Mandarin,Korean,0.45
+Spanish,Gujurati,0.45
+Indonesian,Cantonese,0.46
+Korean,Gujurati,0.46
+Hindi,German,0.47
+Korean,Singaporean,0.48
+Br. Portuguese,Russian,0.49
+Runyankore,German,0.5
+Hindi,Spanish,0.5
+Cantonese,Mandarin,0.5
+Korean,Gishu,0.5
+Korean,Greek,0.51
+Japanese,Mandarin,0.52
+Turkish,Br. Portuguese,0.52
+Russian,Br. Portuguese,0.54
+Hindi,Russian,0.55
+Br. Portuguese,Vietnamese,0.57
+Turkish,Hebrew,0.64
+Japanese,Gujurati,0.64
+Mandarin,Greek,0.65
+Vietnamese,Runyankore,0.66
+Russian,Mandarin,0.67
+Turkish,Gishu,0.67
+Greek,Vietnamese,0.7
+Greek,Taiwanese,0.71
+Japanese,Vietnamese,0.72
+Singaporean,Turkish,0.72
+Cantonese,Japanese,0.74
+Singaporean,Hindi,0.74
+Japanese,Indonesian,0.74
+German,Gishu,0.74
+Korean,German,0.75
+Spanish,Greek,0.76
+Vietnamese,Singaporean,0.78
+Cantonese,Hebrew,0.79
+Hindi,Br. Portuguese,0.79
+Taiwanese,Hindi,0.79
+Indonesian,Br. Portuguese,0.81
+Japanese,Singaporean,0.81
+Cantonese,Runyankore,0.81
+Mandarin,Turkish,0.83
+German,Japanese,0.83
+German,French,0.83
+Spanish,Russian,0.84
+Greek,Cantonese,0.88
+Japanese,Br. Portuguese,0.88
+Hindi,Singaporean,0.88
+Korean,Indonesian,0.88
+Korean,Hebrew,0.9
+Hebrew,Spanish,0.9
+Japanese,Turkish,0.91
+Russian,Singaporean,0.93
+Vietnamese,Indonesian,0.93
+Hindi,Gishu,0.93
+Spanish,Mandarin,0.94
+Korean,Russian,0.94
+Korean,Spanish,0.95
+Vietnamese,Mandarin,0.95
+Korean,French,0.95
+Russian,Spanish,0.98
+Hebrew,Vietnamese,1.03
+Hindi,Vietnamese,1.05
+Hebrew,Russian,1.05
+Spanish,Indonesian,1.13
+Vietnamese,Japanese,1.15
+Korean,Vietnamese,1.19
+Spanish,Korean,1.19
+Hebrew,Korean,1.19
+Spanish,Singaporean,1.19
+Turkish,Runyankore,1.19
+Russian,Runyankore,1.22
+Turkish,Gujurati,1.25
+Hebrew,Mandarin,1.28
+Br. Portuguese,Hindi,1.31
+Mandarin,German,1.33
+Mandarin,French,1.33
+Mandarin,Gishu,1.33
+Br. Portuguese,Turkish,1.34
+Turkish,Korean,1.36
+Russian,Korean,1.37
+Hindi,Indonesian,1.37
+Mandarin,Vietnamese,1.43
+Cantonese,Gujurati,1.44
+Mandarin,Gujurati,1.47
+Russian,Taiwanese,1.47
+German,Hindi,1.48
+Cantonese,Gishu,1.48
+Br. Portuguese,Mandarin,1.51
+Hindi,Turkish,1.51
+Russian,Hindi,1.51
+Vietnamese,Gishu,1.51
+Hindi,Cantonese,1.52
+Hebrew,Runyankore,1.56
+Cantonese,Br. Portuguese,1.57
+German,Singaporean,1.57
+Cantonese,Russian,1.58
+German,Spanish,1.61
+Spanish,Cantonese,1.61
+Turkish,Cantonese,1.62
+Hindi,Japanese,1.64
+Russian,Vietnamese,1.65
+Spanish,Turkish,1.67
+German,Br. Portuguese,1.72
+Vietnamese,French,1.73
+German,Cantonese,1.76
+Vietnamese,Greek,1.76
+Turkish,Spanish,1.77
+Hebrew,Indonesian,1.77
+Spanish,Taiwanese,1.77
+Vietnamese,Hebrew,1.79
+German,Indonesian,1.8
+Cantonese,Turkish,1.86
+Turkish,Mandarin,1.89
+Korean,Turkish,1.89
+Vietnamese,Russian,1.89
+Spanish,Hindi,1.89
+Cantonese,Spanish,1.9
+Hindi,Mandarin,1.9
+German,Runyankore,1.99
+Mandarin,Spanish,2.0
+Vietnamese,Spanish,2.0
+Hindi,Korean,2.0
+Korean,Br. Portuguese,2.01
+Japanese,Hindi,2.07
+Mandarin,Br. Portuguese,2.09
+Vietnamese,Korean,2.15
+Turkish,Indonesian,2.18
+German,Korean,2.19
+Hebrew,Cantonese,2.23
+Turkish,Hindi,2.23
+Vietnamese,Hindi,2.25
+Hebrew,Singaporean,2.29
+Cantonese,Hindi,2.33
+Cantonese,Indonesian,2.33
+German,Vietnamese,2.4
+Vietnamese,Gujurati,2.4
+Turkish,Taiwanese,2.41
+Cantonese,German,2.43
+Br. Portuguese,Indonesian,2.44
+Cantonese,Greek,2.46
+Korean,Hindi,2.48
+Turkish,Vietnamese,2.58
+Turkish,Singaporean,2.59
+German,Mandarin,2.67
+Mandarin,Hindi,2.72
+Hebrew,Taiwanese,2.75
+Vietnamese,German,2.88
+Br. Portuguese,Singaporean,2.95
+German,Taiwanese,2.97
+Hindi,Taiwanese,3.1
+Vietnamese,Turkish,3.4

@@ -1,8 +1,10 @@
 import csv
+import os
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+os.makedirs("Diagrams", exist_ok=True)
 
 #read csv into dictionary tuple:value
 def read_csv(file_path):
@@ -43,7 +45,7 @@ trend_y = slope * scatter_df["Accuracy"] + intercept
 # add trend line to the scatterplot
 plt.plot(scatter_df["Accuracy"], trend_y, color='red', label='Trend Line')
 plt.legend()
-plt.savefig("accuracy vs similarity.png", dpi=300, bbox_inches="tight")
+plt.savefig("./Diagrams/accuracy vs similarity.png", dpi=300, bbox_inches="tight")
 plt.show()
 
 #---------------Normalize the data for comparison---------------#
@@ -102,7 +104,7 @@ plt.xticks(rotation=45, ha="right")
 plt.yticks(rotation=0)
 
 plt.tight_layout()
-plt.savefig("z_accuracy.png", dpi=300, bbox_inches="tight")
+plt.savefig("./Diagrams/z_accuracy.png", dpi=300, bbox_inches="tight")
 plt.show()
 
 #Similarity Heatmap
@@ -123,7 +125,7 @@ plt.xticks(rotation=45, ha="right")
 plt.yticks(rotation=0)
 
 plt.tight_layout()
-plt.savefig("z_similarity.png", dpi=300, bbox_inches="tight")
+plt.savefig("./Diagrams/z_similarity.png", dpi=300, bbox_inches="tight")
 plt.show()
 
 #Comparison heatmap
@@ -144,5 +146,5 @@ plt.xticks(rotation=45, ha="right")
 plt.yticks(rotation=0)
 
 plt.tight_layout()
-plt.savefig("accuracy-similarity.png", dpi=300, bbox_inches="tight")
+plt.savefig("./Diagrams/accuracy-similarity.png", dpi=300, bbox_inches="tight")
 plt.show()

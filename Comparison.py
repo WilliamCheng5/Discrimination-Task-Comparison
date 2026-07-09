@@ -4,10 +4,11 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+from itertools import islice
 os.makedirs("Diagrams", exist_ok=True)
 os.makedirs("Diagrams/Heatmaps", exist_ok=True)
 os.makedirs("Diagrams/Distributions", exist_ok=True)
-
+os.makedirs("Diagrams/Rankings", exist_ok=True)
 
 #read csv into dictionary tuple:value
 def read_csv(file_path):
@@ -15,7 +16,7 @@ def read_csv(file_path):
                 reader = csv.reader(file)
                 labels = next(reader)[1:]
                 data = {}
-                print("Labels:", labels)
+
                 for row in reader:
                         i = 0
                         for value in row[1:]:
@@ -194,4 +195,51 @@ plt.tight_layout()
 plt.axvline(x=sum(comparison.values()) / len(comparison), color="red", linestyle="-", linewidth=1, label="Mean")
 plt.legend(fontsize=5)
 plt.savefig("./Diagrams/Distributions/comparison_distribution.png", dpi=600, bbox_inches="tight")
+plt.close()
+
+#---------------Ranking Visualization---------------------#
+comparison_sorted = { }
+for key, value in comparison.items():
+        comparison_sorted[key[0]+"-"+key[1]] = value
+comparison_sorted = dict(sorted(comparison_sorted.items(), key=lambda item: item[1], reverse=True))
+# print("Sorted comparison:", comparison_sorted)
+comparison_top_half = dict(islice(comparison_sorted.items(), 0, int(len(comparison_sorted)/2)))    
+comparison_bottom_half = dict(islice(comparison_sorted.items(), int(len(comparison_sorted)/2), len(comparison_sorted)))
+comparison_bottom_half = dict(reversed(comparison_bottom_half.items()))
+for key in comparison_bottom_half:
+    comparison_bottom_half[key] = -comparison_bottom_half[key]
+
+# print("Top half of the comparison:", comparison_top_half)
+# print("Bottom half of the comparison:", comparison_bottom_half)
+sns.barplot(data=dict(islice(comparison_top_half.items(), 0, 20)), color="b", orient="h")
+plt.title("Diffference Accuracy - Similarity Z-score", fontsize=8)
+plt.xlabel("Difference")
+plt.ylabel("Accents")
+plt.xticks(ha="right", fontsize=5)
+plt.yticks(fontsize=5)
+plt.tight_layout()
+plt.savefig("./Diagrams/Rankings/accuracy-similarity.png", dpi=600, bbox_inches="tight")
+plt.close()
+
+sns.barplot(data=dict(islice(comparison_bottom_half.items(), 0, 20)), color="b", orient="h")
+plt.title("Diffference Similarity - Accuracy Z-score", fontsize=8)
+plt.xlabel("Difference")
+plt.ylabel("Accents")
+plt.xticks(ha="right", fontsize=5)
+plt.yticks(fontsize=5)
+plt.tight_layout()
+plt.savefig("./Diagrams/Rankings/similarity-accuracy.png", dpi=600, bbox_inches="tight")
+plt.close()
+
+comparison_abs = {key: abs(value) for key, value in comparison_sorted.items()}
+comparison_abs = dict(sorted(comparison_abs.items(), key=lambda item: item[1], reverse=True))
+print("Absolute comparison:", comparison_abs)
+sns.barplot(data=dict(islice(comparison_abs.items(), 0, 20)), color="b", orient="h")
+plt.title("Absolute Diffference Z-score", fontsize=8)
+plt.xlabel("Absolute Difference")
+plt.ylabel("Accents")
+plt.xticks(ha="right", fontsize=5)
+plt.yticks(fontsize=5)
+plt.tight_layout()
+plt.savefig("./Diagrams/Rankings/absolute-difference.png", dpi=600, bbox_inches="tight")
 plt.close()

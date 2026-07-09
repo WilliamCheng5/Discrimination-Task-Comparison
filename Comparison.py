@@ -253,11 +253,11 @@ comparison_sorted = dict(sorted(comparison_sorted.items(), key=lambda item: item
 #write all comparison data to csv
 with open("./Diagrams/Rankings/comparison.csv", "w", newline="", encoding="utf-8") as f:
     writer = csv.writer(f)
-    writer.writerow(["Baseline", "Comparison", "Value"])
+    writer.writerow(["Baseline", "Comparison", "Z_Accuracy", "Z_Similarity", "Value"])
 
     for key, value in comparison_sorted.items():
         lang1, lang2 = key.split("-", 1)
-        writer.writerow([lang1, lang2, value])
+        writer.writerow([lang1, lang2, z_accuracy.get((lang1, lang2), 0), z_similarity.get((lang1, lang2), 0), value])
 
 # print("Sorted comparison:", comparison_sorted)
 comparison_top_half = dict(islice(comparison_sorted.items(), 0, int(len(comparison_sorted)/2)))    
@@ -289,16 +289,16 @@ plt.savefig("./Diagrams/Rankings/similarity-accuracy.png", dpi=600, bbox_inches=
 plt.close()
 
 comparison_abs = {key: abs(value) for key, value in comparison_sorted.items()}
+comparison_abs = dict(sorted(comparison_abs.items(), key=lambda item: item[1], reverse=True))
 #write all comparison_abs data to csv
 with open("./Diagrams/Rankings/comparison_abs.csv", "w", newline="", encoding="utf-8") as f:
     writer = csv.writer(f)
-    writer.writerow(["Baseline", "Comparison", "Value"])
+    writer.writerow(["Baseline", "Comparison", "Z_Accuracy", "Z_Similarity", "Value"])
 
     for key, value in comparison_abs.items():
         lang1, lang2 = key.split("-", 1)
-        writer.writerow([lang1, lang2, value])
+        writer.writerow([lang1, lang2, z_accuracy.get((lang1, lang2), 0), z_similarity.get((lang1, lang2), 0), value])
 
-comparison_abs = dict(sorted(comparison_abs.items(), key=lambda item: item[1], reverse=True))
 sns.barplot(data=dict(islice(comparison_abs.items(), 0, 20)), color="b", orient="h")
 plt.xlim(0, 4.5)
 plt.title("Top 20 Accent Pairs in Absolute Z-score sum", fontsize=8)

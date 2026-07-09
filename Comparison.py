@@ -5,6 +5,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 os.makedirs("Diagrams", exist_ok=True)
+os.makedirs("Diagrams/Heatmaps", exist_ok=True)
+os.makedirs("Diagrams/Distributions", exist_ok=True)
+
 
 #read csv into dictionary tuple:value
 def read_csv(file_path):
@@ -46,7 +49,7 @@ trend_y = slope * scatter_df["Accuracy"] + intercept
 plt.plot(scatter_df["Accuracy"], trend_y, color='red', label='Trend Line')
 plt.legend()
 plt.savefig("./Diagrams/accuracy vs similarity.png", dpi=300, bbox_inches="tight")
-plt.show()
+plt.close()
 
 #---------------Normalize the data for comparison---------------#
 def normalize_data(data):
@@ -73,7 +76,7 @@ def compare_data(z_accuracy, z_similarity):
 
 comparison = compare_data(z_accuracy, z_similarity)
 
-# Convert dictionary to matrix for heatmap visualization
+#---------------Heatmap Visualization---------------------#
 def create_heatmap_matrix(data):
         labels = ['Taiwanese', 'Greek', 'Gujurati', 'Gishu', 'Runyankore', 'French', 'Indonesian', 'Singaporean', 'Hindi', 'Br. Portuguese', 'Cantonese', 'Russian', 'Korean', 'Japanese', 'Turkish', 'Mandarin', 'Spanish', 'Vietnamese', 'Hebrew', 'German']
         matrix = pd.DataFrame(np.nan, index=labels, columns=labels)
@@ -90,61 +93,105 @@ def create_heatmap_matrix(data):
 sns.heatmap(
     create_heatmap_matrix(z_accuracy),
     annot=True,
-    fmt=".2f",
+    fmt=".1f",
     cmap="coolwarm",
     square=True,
     linewidths=0.3,
     linecolor="white",
-    annot_kws={"size":8},
-    cbar_kws={"label":"Standard Deviation"}
+    annot_kws={"size":5},
+    cbar_kws={"label":"Standard Deviation"},
+    vmin = -3, 
+    vmax = 3
 )
 
-plt.title("Accuracy normalized Z score", fontsize=9)
-plt.xticks(rotation=45, ha="right")
-plt.yticks(rotation=0)
+plt.title("Accuracy normalized Z score", fontsize=8)
+plt.xticks(rotation=45, ha="right", fontsize=5)
+plt.yticks(rotation=0, fontsize=5)
 
 plt.tight_layout()
-plt.savefig("./Diagrams/z_accuracy.png", dpi=300, bbox_inches="tight")
-plt.show()
+plt.savefig("./Diagrams/Heatmaps/z_accuracy.png", dpi=600, bbox_inches="tight")
+plt.close()
 
 #Similarity Heatmap
 sns.heatmap(
     create_heatmap_matrix(z_similarity),
     annot=True,
-    fmt=".2f",
+    fmt=".1f",
     cmap="coolwarm",
     square=True,
     linewidths=0.3,
     linecolor="white",
-    annot_kws={"size":8},
-    cbar_kws={"label":"Standard Deviation"}
+    annot_kws={"size":5},
+    cbar_kws={"label":"Standard Deviation"},
+    vmin = -3, 
+    vmax = 3
 )
 
-plt.title("Similarity normalized Z score", fontsize=9)
-plt.xticks(rotation=45, ha="right")
-plt.yticks(rotation=0)
+plt.title("Similarity normalized Z score", fontsize=8)
+plt.xticks(rotation=45, ha="right", fontsize=5)
+plt.yticks(rotation=0, fontsize=5)
 
 plt.tight_layout()
-plt.savefig("./Diagrams/z_similarity.png", dpi=300, bbox_inches="tight")
-plt.show()
+plt.savefig("./Diagrams/Heatmaps/z_similarity.png", dpi=600, bbox_inches="tight")
+plt.close()
 
 #Comparison heatmap
 sns.heatmap(
     create_heatmap_matrix(comparison),
     annot=True,
-    fmt=".2f",
+    fmt=".1f",
     cmap="coolwarm",
     square=True,
     linewidths=0.3,
     linecolor="white",
-    annot_kws={"size":8},
-    cbar_kws={"label":"Accuracy - Similarity Z-score Difference"}
+    annot_kws={"size":5},
+    cbar_kws={"label":"Accuracy - Similarity Z-score Difference"},
+    vmin = -4, 
+    vmax = 4
 )
 
-plt.title("Z-score differences between Accuracy and Similarity", fontsize=9)
-plt.xticks(rotation=45, ha="right")
-plt.yticks(rotation=0)
+plt.title("Z-score differences between Accuracy and Similarity", fontsize=8)
+plt.xticks(rotation=45, ha="right", fontsize=5)
+plt.yticks(rotation=0, fontsize=5)
 
 plt.tight_layout()
-plt.savefig("./Diagrams/accuracy-similarity.png", dpi=300, bbox_inches="tight")
-plt.show()
+plt.savefig("./Diagrams/Heatmaps/accuracy-similarity.png", dpi=600, bbox_inches="tight")
+plt.close()
+
+#---------------Distribution Visualization---------------------#
+sns.histplot(accuracy, x = list(accuracy.values()), bins=20, kde=True, line_kws={"label": "Trend"})
+plt.title("Accuracy Distribution", fontsize=8)
+plt.xlabel("Accuracy", fontsize=5)
+plt.ylabel("Frequency", fontsize=5)
+plt.xticks(fontsize=5)
+plt.yticks(fontsize=5)
+plt.tight_layout()
+#Add the vertical mean line
+plt.axvline(x=sum(accuracy.values()) / len(accuracy), color="red", linestyle="-", linewidth=1, label="Mean")
+plt.legend(fontsize=5)
+plt.savefig("./Diagrams/Distributions/accuracy_distribution.png", dpi=600, bbox_inches="tight")
+plt.close()
+
+sns.histplot(z_similarity, x = list(z_similarity.values()), bins=[-4.0, -3.5, -3.0, -2.5, -2.0, -1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0], kde=True, line_kws={"label": "Trend"})
+plt.title("Similarity Distribution", fontsize=8)
+plt.xlabel("Z-scores", fontsize=5)
+plt.ylabel("Frequency", fontsize=5)
+plt.xticks(fontsize=5)
+plt.yticks(fontsize=5)
+plt.tight_layout()
+plt.axvline(x=sum(z_similarity.values()) / len(z_similarity), color="red", linestyle="-", linewidth=1, label="Mean")
+plt.legend(fontsize=5)
+plt.savefig("./Diagrams/Distributions/similarity_distribution.png", dpi=600, bbox_inches="tight")
+plt.close()
+
+sns.histplot(comparison, x = list(comparison.values()), bins=[-4.0, -3.5, -3.0, -2.5, -2.0, -1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0], kde=True, line_kws={"label": "Trend"})
+plt.title("Distribution of Z-score differences between Accuracy and Similarity", fontsize=8)
+plt.xlabel("Z-score Accuracy - Similarity", fontsize=5)
+plt.ylabel("Frequency", fontsize=5)
+plt.xticks(fontsize=5)
+plt.yticks(fontsize=5)
+plt.tight_layout()
+plt.axvline(x=sum(comparison.values()) / len(comparison), color="red", linestyle="-", linewidth=1, label="Mean")
+plt.legend(fontsize=5)
+plt.savefig("./Diagrams/Distributions/comparison_distribution.png", dpi=600, bbox_inches="tight")
+plt.close()
